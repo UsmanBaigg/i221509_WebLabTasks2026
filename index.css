@@ -1,0 +1,522 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* ===== Question Selector Boxes ===== */
+.question-selector {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 30px 20px;
+  background-color: #2c3e50;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.box-btn {
+  padding: 12px 24px;
+  background-color: #34495e;
+  color: white;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.box-btn:hover {
+  background-color: #455a64;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.box-btn.active {
+  background-color: #2bbbad;
+  border-color: #1fa393;
+  box-shadow: 0 4px 12px rgba(43, 187, 173, 0.4);
+}
+
+/* ===== Question Content Display Control ===== */
+.question-content {
+  display: none !important;
+  min-height: calc(100vh - 120px);
+  width: 100%;
+  animation: fadeIn 0.3s ease;
+}
+
+.question-content.active {
+  display: block !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===== QUESTION 1: Profile Card ===== */
+#q1.active {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f4f7;
+}
+
+.profile-card {
+  background-color: #ffffff;
+  width: 260px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #2bbbad;
+}
+
+.name {
+  margin: 5px 0;
+  color: #333;
+}
+
+.degree {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.role {
+  margin-bottom: 15px;
+  color: #2bbbad;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #2bbbad;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1fa393;
+}
+
+/* ===== QUESTION 2: CSS Grid Dashboard ===== */
+#q2.active {
+  padding: 0;
+  display: block !important;
+}
+
+.dashboard {
+  display: grid;
+  min-height: calc(100vh - 120px);
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 60px 1fr 50px;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+}
+
+#q2 {
+  display: none !important;
+}
+
+.header {
+  grid-area: header;
+  background-color: #b3d9ff;
+  padding: 10px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #ffd6d6;
+  padding: 10px;
+}
+
+.main {
+  grid-area: main;
+  background-color: #d6f5e3;
+  padding: 10px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #bfbfbf;
+  padding: 10px;
+}
+
+/* ===== QUESTION 3: CSS Flexbox Layout ===== */
+#q3 {
+  display: none !important;
+}
+
+#q3.active {
+  padding: 0;
+  display: flex !important;
+  flex-direction: column;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #263238;
+  padding: 15px 30px;
+}
+
+.logo {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.nav-links a:hover {
+  background-color: #455a64;
+  border-radius: 4px;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 20px;
+  padding: 40px;
+  flex-wrap: wrap;
+  background-color: #f5f5f5;
+}
+
+.card {
+  background-color: white;
+  width: 220px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* ===== QUESTION 4: CSS Positioning Demo ===== */
+#q4 {
+  display: none !important;
+}
+
+#q4.active {
+  padding: 0;
+  display: block !important;
+  position: relative;
+}
+
+.navbar-q4 {
+  display: flex;
+  justify-content: space-around;
+  background-color: #263238;
+  padding: 15px;
+  position: sticky;
+  top: 120px;
+  z-index: 100;
+}
+
+.navbar-q4 a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content {
+  padding: 20px;
+}
+
+.relative-box {
+  position: relative;
+  background-color: #e3f2fd;
+  padding: 40px;
+  height: 200px;
+  margin-bottom: 40px;
+}
+
+.absolute-box {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #1565c0;
+  color: white;
+  padding: 10px;
+}
+
+.fixed-box {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff7043;
+  color: white;
+  padding: 12px;
+  border-radius: 5px;
+  z-index: 999;
+}
+
+#q4 .spacer {
+  height: 800px;
+}
+
+.text {
+  margin-bottom: 20px;
+}
+
+/* ===== QUESTION 5: Two Column Layout using CSS Floats ===== */
+#q5 {
+  display: none !important;
+}
+
+#q5.active {
+  padding: 20px;
+  display: block !important;
+}
+
+.container-q5 {
+  width: 100%;
+}
+
+.left {
+  float: left;
+  width: 60%;
+  background-color: #e3f2fd;
+  padding: 15px;
+}
+
+.right {
+  float: left;
+  width: 40%;
+  background-color: #fce4ec;
+  padding: 15px;
+}
+
+.box {
+  background-color: #ffffff;
+  margin-bottom: 15px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.box img {
+  float: left;
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.profile-img-q5 {
+  float: left;
+  width: 100px;
+  height: 80px;
+  margin-right: 10px;
+}
+
+.clear {
+  clear: both;
+}
+
+.right a {
+  color: #1565c0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ===== QUESTION 6: Student Portal ===== */
+#q6 {
+  display: none !important;
+}
+
+#q6.active {
+  padding: 0;
+  display: block !important;
+}
+
+.container-q6 {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 70px 1fr 40px;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  min-height: calc(100vh - 120px);
+}
+
+.header-q6 {
+  grid-area: header;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  right: 20px;
+  background-color: #e74c3c;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 12px;
+}
+
+.aside-q6 {
+  grid-area: sidebar;
+  background-color: #ecf0f1;
+  padding: 15px;
+}
+
+.aside-q6 ul {
+  list-style: none;
+}
+
+.aside-q6 li {
+  background-color: #dcdde1;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.aside-q6 li:hover {
+  background-color: #b2bec3;
+}
+
+.main-q6 {
+  grid-area: content;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.main-q6 h2 {
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+
+.courses {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.course {
+  flex: 1;
+  min-width: 150px;
+  background-color: #dfeefb;
+  padding: 15px;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.course:hover {
+  background-color: #c8e0f5;
+  transform: translateY(-5px);
+}
+
+.footer-q6 {
+  grid-area: footer;
+  background-color: #2c3e50;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+  .question-selector {
+    gap: 10px;
+    padding: 15px 10px;
+  }
+
+  .box-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px auto 1fr 50px;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+  }
+
+  .left {
+    float: none;
+    width: 100%;
+  }
+
+  .right {
+    float: none;
+    width: 100%;
+  }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .container-q6 {
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px auto 1fr 40px;
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "content"
+      "footer";
+  }
+}

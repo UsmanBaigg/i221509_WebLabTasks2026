@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Lab - All Questions</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- Question Selector Boxes -->
+  <div class="question-selector">
+    <button class="box-btn active" onclick="showQuestion(1)" data-question="1">Question 1</button>
+    <button class="box-btn" onclick="showQuestion(2)" data-question="2">Question 2</button>
+    <button class="box-btn" onclick="showQuestion(3)" data-question="3">Question 3</button>
+    <button class="box-btn" onclick="showQuestion(4)" data-question="4">Question 4</button>
+    <button class="box-btn" onclick="showQuestion(5)" data-question="5">Question 5</button>
+    <button class="box-btn" onclick="showQuestion(6)" data-question="6">Question 6</button>
+  </div>
+
+  <!-- Question 1: Profile Card -->
+  <div id="q1" class="question-content active">
+    <div class="profile-card">
+      <img src="profile.jpg" alt="Profile Image" class="profile-img">
+      <h2 class="name">Usman Baig</h2>
+      <p class="degree">BS Software Engineering</p>
+      <p class="role">Frontend Developer</p>
+      <button class="btn">View Profile</button>
+    </div>
+  </div>
+
+  <!-- Question 2: CSS Grid Dashboard -->
+  <div id="q2" class="question-content">
+    <div class="dashboard">
+      <header class="header">Header</header>
+      <aside class="sidebar">Sidebar</aside>
+      <main class="main">Main Content</main>
+      <footer class="footer">Footer</footer>
+    </div>
+  </div>
+
+  <!-- Question 3: CSS Flexbox Layout -->
+  <div id="q3" class="question-content">
+    <nav class="navbar">
+      <div class="logo">MySite</div>
+      <div class="nav-links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </div>
+    </nav>
+
+    <section class="cards-container">
+      <div class="card">
+        <h3>Card 1</h3>
+        <p>This is a flexbox card.</p>
+      </div>
+      <div class="card">
+        <h3>Card 2</h3>
+        <p>This is a flexbox card.</p>
+      </div>
+      <div class="card">
+        <h3>Card 3</h3>
+        <p>This is a flexbox card.</p>
+      </div>
+      <div class="card">
+        <h3>Card 4</h3>
+        <p>This is a flexbox card.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Question 4: CSS Positioning Demo -->
+  <div id="q4" class="question-content">
+    <nav class="navbar-q4">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="content">
+      <div class="relative-box">
+        <p>This container uses <strong>position: relative</strong>.</p>
+        <div class="absolute-box">
+          Absolute Box
+        </div>
+      </div>
+
+      <p class="text">
+        Scroll down to see the fixed element remain visible.
+      </p>
+
+      <div class="spacer"></div>
+    </div>
+
+    <div class="fixed-box">
+      Fixed Help
+    </div>
+  </div>
+
+  <!-- Question 5: Two Column Layout using CSS Floats -->
+  <div id="q5" class="question-content">
+    <div class="container-q5">
+      <div class="left">
+        <div class="box">
+          <img src="profile.jpg" alt="Profile Image" class="profile-img-q5">
+          <p>This is the first content box with image and text.</p>
+        </div>
+
+        <div class="box">
+          <img src="profile.jpg" alt="Profile Image" class="profile-img-q5">
+          <p>This is the second content box with image and text.</p>
+        </div>
+
+        <div class="box">
+          <img src="profile.jpg" alt="Profile Image" class="profile-img-q5">
+          <p>This is the third content box with image and text.</p>
+        </div>
+      </div>
+
+      <div class="right">
+        <p>Visit our university website:</p>
+        <a href="https://www.nust.edu.pk" target="_blank">
+          National University of Sciences & Technology
+        </a>
+      </div>
+
+      <div class="clear"></div>
+    </div>
+  </div>
+
+  <!-- Question 6: Student Portal -->
+  <div id="q6" class="question-content">
+    <div class="container-q6">
+      <header class="header-q6">
+        <h1>Student Portal</h1>
+        <span class="badge">NEW</span>
+      </header>
+
+      <aside class="aside-q6">
+        <ul>
+          <li>Dashboard</li>
+          <li>Profile</li>
+          <li>Courses</li>
+          <li>Settings</li>
+        </ul>
+      </aside>
+
+      <main class="main-q6">
+        <h2>My Courses</h2>
+        <div class="courses">
+          <div class="course">Web Engineering</div>
+          <div class="course">Data Science</div>
+          <div class="course">AI Systems</div>
+        </div>
+      </main>
+
+      <footer class="footer-q6">
+        © 2026 CSS Lab
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    function showQuestion(num) {
+      // Hide all question contents
+      const contents = document.querySelectorAll('.question-content');
+      contents.forEach(content => content.classList.remove('active'));
+
+      // Remove active class from all buttons
+      const buttons = document.querySelectorAll('.box-btn');
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      // Show selected question and highlight button
+      document.getElementById('q' + num).classList.add('active');
+      document.querySelector('[data-question="' + num + '"]').classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
