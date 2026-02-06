@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Sticky Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #263238;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main content */
+.content {
+    padding: 20px;
+}
+
+/* Relative container */
+.relative-box {
+    position: relative;
+    background-color: #e3f2fd;
+    padding: 40px;
+    height: 200px;
+    margin-bottom: 40px;
+}
+
+/* Absolute element inside relative container */
+.absolute-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #1565c0;
+    color: white;
+    padding: 10px;
+}
+
+/* Fixed element */
+.fixed-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff7043;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+}
+
+/* Extra content for scrolling */
+.spacer {
+    height: 800px;
+}
+
+.text {
+    margin-bottom: 20px;
+}

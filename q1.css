@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f4f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Card Container */
+.profile-card {
+  background-color: #ffffff;
+  width: 260px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Image */
+.profile-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #2bbbad;
+}
+
+/* Text Styling */
+.name {
+  margin: 5px 0;
+  color: #333;
+}
+
+.degree {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.role {
+  margin-bottom: 15px;
+  color: #2bbbad;
+  font-weight: bold;
+}
+
+/* Button */
+.btn {
+  padding: 10px 20px;
+  background-color: #2bbbad;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #1fa393;
+}

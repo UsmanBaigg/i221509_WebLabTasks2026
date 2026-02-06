@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Positioning Demo</title>
+    <link rel="stylesheet" href="q4.css">
+</head>
+<body>
+
+<!-- Sticky Navigation Bar (Flexbox) -->
+<nav class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</nav>
+
+<!-- Main Content -->
+<div class="content">
+
+    <!-- Relative Container -->
+    <div class="relative-box">
+        <p>This container uses <strong>position: relative</strong>.</p>
+
+        <!-- Absolute Element -->
+        <div class="absolute-box">
+            Absolute Box
+        </div>
+    </div>
+
+    <p class="text">
+        Scroll down to see the fixed element remain visible.
+    </p>
+
+    <!-- Extra space for scrolling -->
+    <div class="spacer"></div>
+
+</div>
+
+<!-- Fixed Element -->
+<div class="fixed-box">
+    Fixed Help
+</div>
+
+</body>
+</html>
