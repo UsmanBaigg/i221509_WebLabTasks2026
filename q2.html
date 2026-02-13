@@ -1,18 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>CSS Grid Dashboard</title>
-  <link rel="stylesheet" href="q2.css">
+<meta charset="UTF-8">
+<title>Feature Comparison</title>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100 p-8">
 
-  <div class="dashboard">
-    <header class="header">Header</header>
-    <aside class="sidebar">Sidebar</aside>
-    <main class="main">Main Content</main>
-    <footer class="footer">Footer</footer>
-  </div>
+<div class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+<!-- Panel Template -->
+<div class="bg-white border rounded-xl p-6 shadow transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:border-blue-500 text-center">
+    <h2 class="text-xl md:text-2xl font-semibold">Free</h2>
+    <p class="text-gray-600 mt-2">Basic tools for individuals</p>
+
+    <ul class="space-y-3 mt-4">
+        <li class="flex items-center justify-center gap-2 text-green-600">✔ Task Management</li>
+        <li class="flex items-center justify-center gap-2 text-green-600">✔ File Sharing</li>
+        <li class="flex items-center justify-center gap-2 text-red-500">✖ Analytics</li>
+        <li class="flex items-center justify-center gap-2 text-red-500">✖ Priority Support</li>
+    </ul>
+
+    <button class="w-full bg-gray-600 hover:bg-gray-700 text-white rounded-lg mt-6 py-2 transition">Enable</button>
+</div>
+
+<div class="bg-white border rounded-xl p-6 shadow transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:border-blue-500 text-center">
+    <h2 class="text-xl md:text-2xl font-semibold">Team</h2>
+    <p class="text-gray-600 mt-2">Collaboration tools for teams</p>
+
+    <ul class="space-y-3 mt-4">
+        <li class="flex justify-center gap-2 text-green-600">✔ Task Management</li>
+        <li class="flex justify-center gap-2 text-green-600">✔ File Sharing</li>
+        <li class="flex justify-center gap-2 text-green-600">✔ Analytics</li>
+        <li class="flex justify-center gap-2 text-red-500">✖ Priority Support</li>
+    </ul>
+
+    <button class="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-lg mt-6 py-2 transition">Upgrade</button>
+</div>
+
+<div class="bg-white border rounded-xl p-6 shadow transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:border-blue-500 text-center">
+    <h2 class="text-xl md:text-2xl font-semibold">Business</h2>
+    <p class="text-gray-600 mt-2">Advanced analytics & insights</p>
+
+    <ul class="space-y-3 mt-4">
+        <li class="flex justify-center gap-2 text-green-600">✔ Task Management</li>
+        <li class="flex justify-center gap-2 text-green-600">✔ File Sharing</li>
+        <li class="flex justify-center gap-2 text-green-600">✔ Analytics</li>
+        <li class="flex justify-center gap-2 text-green-600">✔ Priority Support</li>
+    </ul>
+
+    <button class="w-full bg-green-600 hover:bg-green-700 text-white rounded-lg mt-6 py-2 transition">Upgrade</button>
+</div>
+
+<div class="bg-white border rounded-xl p-6 shadow transition-all duration-300 hover:shadow-2xl hover:scale-105 hover:border-blue-500 text-center">
+    <h2 class="text-xl md:text-2xl font-semibold">Enterprise</h2>
+    <p class="text-gray-600 mt-2">Full-scale enterprise solution</p>
+
+    <ul class="space-y-3 mt-4">
+        <li class="flex justify-center gap-2 text-green-600">✔ All Features</li>
+        <li class="flex justify-center gap-2 text-green-600">✔ Dedicated Manager</li>
+        <li class="flex justify-center gap-2 text-green-600">✔ Advanced Security</li>
+        <li class="flex justify-center gap-2 text-green-600">✔ Custom Integration</li>
+    </ul>
+
+    <button class="w-full bg-yellow-600 hover:bg-yellow-700 text-white rounded-lg mt-6 py-2 transition">Contact Sales</button>
+</div>
+
+</div>
 
 </body>
 </html>

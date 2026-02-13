@@ -1,0 +1,122 @@
+.hero-gradient {
+    background: linear-gradient(135deg, #2563eb, #1e3a8a);
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.cta-primary {
+    background-color: white;
+    color: #1e3a8a;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta-primary:hover {
+    background-color: #f3f4f6;
+}
+
+.cta-secondary {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.cta-secondary:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+}
+
+.feature-card h3 {
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.feature-card p {
+    margin-top: 0.5rem;
+    color: #6b7280;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+.stats-section {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 4rem 1.5rem;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+}
+
+.testimonial-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+}
+
+.footer-heading {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: white;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+}

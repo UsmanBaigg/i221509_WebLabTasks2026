@@ -1,62 +1,115 @@
+/* Global */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f2f4f7;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* Card Container */
-.profile-card {
-  background-color: #ffffff;
-  width: 260px;
-  padding: 20px;
-  margin: 20px;
-  text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+/* Header */
+header {
+    background-color: #0a1a4f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 17px;
 }
 
-/* Profile Image */
-.profile-img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
-  border: 3px solid #2bbbad;
+/* Navigation - Flexbox */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #1e3a8a;
 }
 
-/* Text Styling */
-.name {
-  margin: 5px 0;
-  color: #333;
+nav a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 15px;
 }
 
-.degree {
-  margin: 4px 0;
-  font-size: 14px;
-  color: #666;
+nav a:hover {
+    background-color: #1d4ed8;
 }
 
-.role {
-  margin-bottom: 15px;
-  color: #2bbbad;
-  font-weight: bold;
+/* Cards - CSS Grid */
+.cards-section {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
 }
 
-/* Button */
-.btn {
-  padding: 10px 20px;
-  background-color: #2bbbad;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+.card {
+    background-color: #1d4ed8;
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 15px;
 }
 
-.btn:hover {
-  background-color: #1fa393;
+/* Gallery */
+.gallery {
+    display: grid;
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Large Screens */
+@media (min-width: 1024px) {
+
+    .cards-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    header { font-size: 17px; }
+}
+
+/* Medium Screens */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .cards-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    header { font-size: 15px; }
+}
+
+/* Small Screens */
+@media (max-width: 767px) {
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cards-section {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    header { font-size: 13px; }
 }
