@@ -1,32 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Team Member Card</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<title>Mini Kanban Board</title>
+
+<style>
+
+body{
+font-family: Arial;
+text-align:center;
+}
+
+.board{
+display:flex;
+justify-content:space-around;
+margin-top:20px;
+}
+
+.column{
+width:30%;
+background:#f2f2f2;
+padding:10px;
+border-radius:10px;
+min-height:250px;
+}
+
+.task{
+background:white;
+padding:8px;
+margin:6px;
+border-radius:5px;
+cursor:grab;
+}
+
+.low{border-left:6px solid green;}
+.medium{border-left:6px solid orange;}
+.high{border-left:6px solid red;}
+
+</style>
 </head>
-<body class="bg-gray-100 flex justify-center items-center min-h-screen p-6">
 
-<div class="flex flex-col md:flex-row items-center md:items-start text-center md:text-left bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out max-w-2xl">
+<body>
 
-<img src="https://picsum.photos/200"
-     class="rounded-full h-24 w-24 md:h-32 md:w-32 hover:scale-105 transition-transform duration-300"
-     alt="Team Member">
+<h2>Kanban Board</h2>
 
-<div class="md:ml-6 mt-4 md:mt-0">
-    <h2 class="text-xl font-bold">Usman Baig</h2>
-    <p class="text-gray-600 mt-2">
-        Full Stack Developer specializing in scalable web applications and cloud-based systems.
-    </p>
+<input type="text" id="taskInput" placeholder="Enter task">
+<select id="priority">
+<option value="low">Low</option>
+<option value="medium">Medium</option>
+<option value="high">High</option>
+</select>
 
-    <div class="flex justify-center md:justify-start space-x-4 mt-4">
-        <a href="#" class="hover:text-blue-500 hover:scale-110 transition">GitHub</a>
-        <a href="#" class="hover:text-blue-500 hover:scale-110 transition">LinkedIn</a>
-        <a href="#" class="hover:text-blue-500 hover:scale-110 transition">Portfolio</a>
-    </div>
+<button onclick="addTask()">Add Task</button>
+
+<div class="board">
+
+<div class="column" id="todo" ondrop="drop(event)" ondragover="allowDrop(event)">
+<h3>To-Do</h3>
+</div>
+
+<div class="column" id="progress" ondrop="drop(event)" ondragover="allowDrop(event)">
+<h3>In Progress</h3>
+</div>
+
+<div class="column" id="done" ondrop="drop(event)" ondragover="allowDrop(event)">
+<h3>Done</h3>
 </div>
 
 </div>
+
+<script src="q3.js"></script>
 
 </body>
 </html>

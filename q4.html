@@ -2,45 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>CSS Positioning Demo</title>
-    <link rel="stylesheet" href="q4.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4: Dynamic Table Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        .generator {
+            background: white;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            max-width: 620px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .generator h2 {
+            margin: 0 15px 0 0;
+            font-size: 18px;
+        }
+        input[type="number"] {
+            width: 90px;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #error {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        #tableContainer {
+            max-width: 800px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+            font-size: 15px;
+        }
+        .even {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
+    <h1>Task 4: Dynamic Table Generator</h1>
 
-<!-- Sticky Navigation Bar (Flexbox) -->
-<nav class="navbar">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
-</nav>
-
-<!-- Main Content -->
-<div class="content">
-
-    <!-- Relative Container -->
-    <div class="relative-box">
-        <p>This container uses <strong>position: relative</strong>.</p>
-
-        <!-- Absolute Element -->
-        <div class="absolute-box">
-            Absolute Box
-        </div>
+    <div class="generator">
+        <h2>Dynamic Table Generator</h2>
+        <label>Rows: <input type="number" id="rows" value="5" min="1" max="50"></label>
+        <label>Columns: <input type="number" id="cols" value="2" min="1" max="50"></label>
+        <button id="generateBtn">Generate Table</button>
+        <div id="error"></div>
     </div>
 
-    <p class="text">
-        Scroll down to see the fixed element remain visible.
-    </p>
+    <div id="tableContainer"></div>
 
-    <!-- Extra space for scrolling -->
-    <div class="spacer"></div>
-
-</div>
-
-<!-- Fixed Element -->
-<div class="fixed-box">
-    Fixed Help
-</div>
-
+    <script src="q4.js"></script>
 </body>
 </html>

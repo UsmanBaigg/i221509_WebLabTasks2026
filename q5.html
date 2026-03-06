@@ -2,45 +2,92 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Two Column Layout using CSS Floats</title>
-    <link rel="stylesheet" href="q5.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5: Nested Table with Sort & Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+        }
+        #search {
+            width: 320px;
+            padding: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        table {
+            width: 100%;
+            max-width: 900px;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+        }
+        th:hover {
+            background-color: #e6e6e6;
+        }
+        .student-row td:first-child {
+            font-weight: bold;
+            background-color: #f8f8f8;
+        }
+        .course-row td:first-child {
+            background-color: #fafafa;
+        }
+        .low-score {
+            background-color: #ffe6e6 !important;
+        }
+        .toggle {
+            display: inline-block;
+            width: 20px;
+            font-size: 18px;
+            cursor: pointer;
+            color: #555;
+        }
+        .toggle:hover {
+            color: #000;
+        }
+        .no-results {
+            text-align: center;
+            padding: 20px;
+            color: #888;
+            font-style: italic;
+        }
+    </style>
 </head>
 <body>
+    <h1>Task 5: Nested Table with Sort & Search</h1>
+    <p><strong>Time:</strong> 25 mins | <strong>Marks:</strong> 12</p>
+    
+    <input type="text" id="search" placeholder="Search by name or course">
 
-<div class="container">
+    <table id="studentsTable">
+        <thead>
+            <tr>
+                <th data-column="name">Student Name</th>
+                <th data-column="course">Course</th>
+                <th data-column="score">Score</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
 
-    <!-- Left Section -->
-    <div class="left">
-
-        <div class="box">
-            <img src="profile.jpg" alt="Profile Image" class="profile-img">
-            <p>This is the first content box with image and text.</p>
-        </div>
-
-        <div class="box">
-           <img src="profile.jpg" alt="Profile Image" class="profile-img">
-            <p>This is the second content box with image and text.</p>
-        </div>
-
-        <div class="box">
-            <img src="profile.jpg" alt="Profile Image" class="profile-img">
-            <p>This is the third content box with image and text.</p>
-        </div>
-
-    </div>
-
-    <!-- Right Section -->
-    <div class="right">
-        <p>Visit our university website:</p>
-        <a href="https://www.nust.edu.pk" target="_blank">
-            National University of Sciences & Technology
-        </a>
-    </div>
-
-    <!-- Clear Float -->
-    <div class="clear"></div>
-
-</div>
-
+    <script src="q5.js"></script>
 </body>
 </html>
